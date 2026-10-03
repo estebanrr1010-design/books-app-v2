@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Native Edge-to-Edge Notch & Safe Area Coverage -->
+    <meta 
+      name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" 
+    />
+    
+    <!-- iOS Fullscreen & Translucent Status Bar -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#0a1128" id="theme-color-meta" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+    <title>books-app</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html, body {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #0a1128;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+      }
+      #root {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      /* Zero-frame splash overlay */
+      #initial-loader {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: #0a1128;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 999999;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div id="initial-loader">
+        <svg 
+          width="64" 
+          height="64" 
+          viewBox="0 0 48 48" 
+          fill="none" 
+          stroke="#ffffff" 
+          stroke-width="2.4" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+          style="filter: drop-shadow(0 4px 16px rgba(255,255,255,0.3));"
+        >
+          <path d="M6 6v36" />
+          <path d="M42 6v36" />
+          <path d="M6 18h36" />
+          <path d="M6 32h36" />
+          <path d="M6 42h36" />
+          <path d="M12 18V9h4v9" />
+          <path d="M16 18V9h4v9" />
+          <path d="M22 18l4-8h4l-4 8" />
+          <path d="M28 32v-10h4v10" />
+          <path d="M32 32v-10h4v10" />
+          <path d="M13 32l-3-9h4l3 9" />
+        </svg>
+        <div style="
+          color: rgba(255, 255, 255, 0.9); 
+          font-size: 13px; 
+          font-weight: 600; 
+          letter-spacing: 0.26em; 
+          text-transform: uppercase; 
+          margin-top: 18px;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        ">
+          SHELF
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
